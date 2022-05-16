@@ -9,7 +9,7 @@ function App() {
         <NavBar/>
         <img  src={logo} className="App-logo" alt="logo"/>
         <h1 style={{color: 'white'}}>
-          Hola
+          Título de la web
         </h1>
         <a
           className="App-link"
@@ -17,7 +17,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+        
         </a>
       </header>
     </div>
