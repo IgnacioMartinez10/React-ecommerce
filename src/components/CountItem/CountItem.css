@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.card{
+    width: 400px;
+    height: auto;
+    background-color: #e3e3e3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-radius: 10px;
+}
+.containerButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerButton button{
+    width: 30px;
+    height: 50px;
+}
+
+img{
+    margin-top: 50px;
+    width: 300px;
+}

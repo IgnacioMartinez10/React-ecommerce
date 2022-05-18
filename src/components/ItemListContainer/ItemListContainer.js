@@ -1,8 +1,8 @@
 import './ItemListContainer.css';
 
-const ItemListContainer = (props) =>{
+const ItemListContainer = ({titulo}) =>{
     return(
-        <h1 style={{color: 'white'}}>{props.titulo}</h1>
+        <h1 style={{color: 'white'}}>{titulo}</h1>
     )
 }
 
