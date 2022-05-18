@@ -18,7 +18,7 @@ const CountItem = () => {
 
     return (
         <div className='card'>
-            <img src='../images/VasoCoffe.jpg' alt='VasoCoffee'></img>
+            <img className='vasoCoffee' src='../images/VasoCoffe.jpg' alt='VasoCoffee'></img>
             <h2>Vaso Coffee ST Negro</h2>
             <p>$800</p>
             <div className='containerButton'>
