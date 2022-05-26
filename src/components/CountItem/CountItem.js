@@ -1,11 +1,11 @@
 import './CountItem.css';
 import {useState} from 'react';
 
-const CountItem = () => {
+const CountItem = ({stock}) => {
     const [count, setCount] = useState(0);
 
     const increment = () => {
-        if (count >= 0) {
+        if (count >= 0 && stock > count) {
             setCount(count + 1)
         }
     }
@@ -18,9 +18,6 @@ const CountItem = () => {
 
     return (
         <div className='card'>
-            <img className='vasoCoffee' src='../images/VasoCoffe.jpg' alt='VasoCoffee'></img>
-            <h2>Vaso Coffee ST Negro</h2>
-            <p>$800</p>
             <div className='containerButton'>
                 <button onClick={decrement}>-</button>
                 <h1>{count}</h1>
