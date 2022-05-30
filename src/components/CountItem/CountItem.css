@@ -4,8 +4,7 @@
 }
 
 .card{
-    width: 400px;
-    height: auto;
+    
     background-color: #e3e3e3;
     display: flex;
     flex-direction: column;
@@ -21,8 +20,18 @@
 }
 
 .containerButton button{
-    width: 30px;
-    height: 50px;
+  width: 30px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+}
+
+.comprar{
+    border: none;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    padding: 4px;
 }
 
 .vasoCoffee{

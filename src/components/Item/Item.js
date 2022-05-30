@@ -1,23 +1,25 @@
+import CountItem from '../CountItem/CountItem';
 import './Item.css';
-import CountItem from '../CountItem/CountItem.js'
 
 
-const Item = ({id, name, price, img, desc, stock}) =>{
-    
+
+
+const Item = ({ id, name, price, img, desc, stock }) => {
+
     return (
-         <div className='cardContainer' key={id}>
-            <img className='cardImg' variant="top" src={img} alt={name} />
-            <div>
-                <h1>{name}</h1>
-                <p>{desc}</p>
+
+
+        <div class="card" key={id}>
+            <img src={img} class="card-img-top" alt={name} />
+            <div class="card-body">
+                <h1 class="card-title">{name}</h1>
                 <p>{price}</p>
+
             </div>
-            <div>
-                <CountItem stock ={stock}/>
-            </div>
+            <CountItem stock = {stock}/>
         </div>
-        
-    )   
+
+    )
 }
 
 export default Item;

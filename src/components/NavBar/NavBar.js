@@ -4,9 +4,9 @@ const NavBar = () => {
     return (
         <nav className='nav'>
             <div className='contentButton'>
-                <button>Inicio</button>
-                <button>Productos</button>
-                <button>Nosotros</button>
+                <button className='button'>Inicio</button>
+                <button className='button'>Productos</button>
+                <button className='button'>Nosotros</button>
             </div>
         <CartWidget/>
         </nav>

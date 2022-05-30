@@ -1,11 +1,22 @@
-.cardContainer{
-    max-width: 400px;
-    color: white;
-    margin: 5px;
+.card{
+    width: 200px;
+    height: auto;
+    margin: 0px 20px;
 }
 
-img{
-    width: 100%;
-    height: 20vw;
-    object-fit: cover;
+.card-title{
+    font-size: 20px;
+}
+.verProducto{
+    font-weight: bold;
+    border: none;
+    background-color: #e3e3e3;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.verProducto:hover{
+    background-color: black;
+    color: #e3e3e3;
 }

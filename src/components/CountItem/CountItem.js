@@ -23,8 +23,8 @@ const CountItem = ({stock}) => {
                 <h1>{count}</h1>
                 <button onClick={increment}>+</button>
             </div>
-            <button>Comprar</button>
-        </div>
+            <button className='comprar'>Comprar</button>
+        </div>        
     )   
 }
 

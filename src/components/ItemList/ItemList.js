@@ -8,10 +8,10 @@ function ItemList ({products}) {
 
             key = {products.id}
             name ={ products.name}
+            desc = {products.desc}
             img = {products.img}
             price = {products.price}
             stock = {products.stock}
-            desc = {products.desc}
             />
         )
     ))
