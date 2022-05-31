@@ -1,4 +1,3 @@
-import CountItem from '../CountItem/CountItem';
 import './Item.css';
 
 
@@ -14,9 +13,8 @@ const Item = ({ id, name, price, img, desc, stock }) => {
             <div class="card-body">
                 <h1 class="card-title">{name}</h1>
                 <p>{price}</p>
-
             </div>
-            <CountItem stock = {stock}/>
+            <button className='verProducto'>VER PRODUCTO</button>
         </div>
 
     )
