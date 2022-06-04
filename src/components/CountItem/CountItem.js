@@ -1,7 +1,7 @@
 import './CountItem.css';
 import {useState} from 'react';
 
-const CountItem = ({stock}) => {
+const CountItem = ({stock, onAdd}) => {
     const [count, setCount] = useState(0);
 
     const increment = () => {
@@ -16,6 +16,10 @@ const CountItem = ({stock}) => {
         }
     }
 
+    const agregarAlCarrito = () =>{
+        onAdd(count);
+    }
+
     return (
         <div className='card'>
             <div className='containerButton'>
@@ -23,7 +27,7 @@ const CountItem = ({stock}) => {
                 <h1>{count}</h1>
                 <button onClick={increment}>+</button>
             </div>
-            <button className='comprar'>Comprar</button>
+            <button onClick={agregarAlCarrito} className='comprar'>Agregar al carrito</button>
         </div>        
     )   
 }

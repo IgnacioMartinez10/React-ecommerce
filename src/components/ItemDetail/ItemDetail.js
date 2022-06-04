@@ -1,9 +1,14 @@
 import CountItem from "../CountItem/CountItem";
 import './ItemDetail.css';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ id, name, price, img, desc, stock }) => {
+const [quantity, setQuantity] = useState(0);
 
-
+const handleOnAdd = (count) =>{
+  setQuantity(count);
+}
 
     return (
         <div className='card' key={id}>
@@ -14,7 +19,7 @@ const ItemDetail = ({ id, name, price, img, desc, stock }) => {
                 <p className="price">{price}</p>
             </div>
             <div>
-                <CountItem stock={stock} />
+                {quantity > 0 ? <Link to='/cart' className="comprar">Finalizar compra</Link> : <CountItem stock={stock} onAdd={handleOnAdd} />}
             </div>
         </div>
 
