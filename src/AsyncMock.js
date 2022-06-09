@@ -23,7 +23,7 @@ const productStock = [
         name: "Vaso Coffee Express",
         price: '$500',
         img: "../images/VasoExpress.jpg",
-        desc: "piripitiflautico",
+        desc: "Vaso coffee de plástico con orificio en la tapa para beber Estampado con frases en serigrafía. No apto para microondas",
         stock: 10,
         category: 'Coffee'
     },

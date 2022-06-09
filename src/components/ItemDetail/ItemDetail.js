@@ -1,13 +1,17 @@
 import CountItem from "../CountItem/CountItem";
 import './ItemDetail.css';
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import CartContext from "../../Context/CartContext";
 
 const ItemDetail = ({ id, name, price, img, desc, stock }) => {
 const [quantity, setQuantity] = useState(0);
+const {addItem} = useContext (CartContext)
 
-const handleOnAdd = (count) =>{
-  setQuantity(count);
+const handleOnAdd = (quantity) => {
+    console.log ('Agregar al carrito')
+    setQuantity(quantity)
+    addItem({id, name, price, quantity})
 }
 
     return (
