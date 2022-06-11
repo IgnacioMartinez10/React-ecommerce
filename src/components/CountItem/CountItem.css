@@ -1,13 +1,13 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .card{
-    
     background-color: #e3e3e3;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     color: black;
@@ -26,15 +26,10 @@
   color: white;
 }
 
-.comprar{
+.addToCart{
     border: none;
     background-color: black;
     border-radius: 20px;
     color: white;
     padding: 4px;
-}
-
-.vasoCoffee{
-    margin-top: 50px;
-    width: 300px;
 }

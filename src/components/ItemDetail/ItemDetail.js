@@ -20,10 +20,11 @@ const handleOnAdd = (quantity) => {
             <div class="card-body">
                 <h1 class="card-title">{name}</h1>
                 <p className="desc">{desc}</p>
-                <p className="price">{price}</p>
+                <p className="price">${price}</p>
             </div>
             <div>
-                {quantity > 0 ? <Link to='/cart' className="comprar">Finalizar compra</Link> : <CountItem stock={stock} onAdd={handleOnAdd} />}
+                {quantity > 0 ? <Link to='/cart' className="verProducto">Finalizar compra</Link> : <CountItem stock={stock} onAdd={handleOnAdd} />}
+                
             </div>
         </div>
 
