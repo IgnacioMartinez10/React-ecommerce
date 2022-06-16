@@ -2,11 +2,12 @@
 import './ItemListContainer.css';
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList';
-import { getProducts} from '../../AsyncMock'
-import { getProductsByCategory } from '../../AsyncMock';
+// import { getProducts} from '../../AsyncMock'
+// import { getProductsByCategory } from '../../AsyncMock';
 import { useParams } from 'react-router-dom';
 import { ClipLoader  } from 'react-spinners';
-
+import { getDocs, collection, query, where } from 'firebase/firestore'
+import { db } from '../../services/firebase';
 
 const ItemListContainer = (props) => {
     const [item, setItem] = useState([]);
@@ -17,23 +18,40 @@ const ItemListContainer = (props) => {
 
         setLoading(true)
 
-        if(!categoryId) {
-            getProducts().then(response => {
-                setItem(response)
-            }).catch(error => {
-                alert('NO SE PUEDEN CARGAR LOS PRODUCTOS')
-            }).finally(() => {
-                setLoading(false)
+        const collectionRef = categoryId
+        ? query(collection(db, 'products'), where('category', '==', categoryId))
+        : collection(db, 'products')
+
+
+        getDocs(collectionRef).then(response =>{
+            console.log(response.docs)
+            const products = response.docs.map(doc => {
+                return {id: doc.id, ...doc.data()}
             })
-        } else {
-            getProductsByCategory(categoryId).then(response => {
-                setItem(response)
-            }).catch(error => {
-                alert('Error al cargar los productos')
-            }).finally(() => {
-                setLoading(false)
-            })
-        }
+            setItem(products)
+        }).catch(error => {
+            console.log(error)
+        }).finally(() => {
+            setLoading(false)
+        })
+
+        // // if(!categoryId) {
+        // //     getProducts().then(response => {
+        // //         setItem(response)
+        // //     }).catch(error => {
+        // //         alert('NO SE PUEDEN CARGAR LOS PRODUCTOS')
+        // //     }).finally(() => {
+        // //         setLoading(false)
+        // //     })
+        // // } else {
+        // //     getProductsByCategory(categoryId).then(response => {
+        // //         setItem(response)
+        // //     }).catch(error => {
+        // //         alert('Error al cargar los productos')
+        // //     }).finally(() => {
+        // //         setLoading(false)
+        // //     })
+        // // }
     }, [categoryId]);
 
     if(loading){
