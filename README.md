@@ -28,6 +28,6 @@ Built Using: Create-React-App
 
 ## Librerias utilizadas
 * Sweet Alert2 https://sweetalert2.github.io/ para notificaciones.
-*React Bootstrap https://react-bootstrap.netlify.app/
+* React Bootstrap https://react-bootstrap.netlify.app/
 * React Hook Form https://react-hook-form.com/ para el formulario.
 
