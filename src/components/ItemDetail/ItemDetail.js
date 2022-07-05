@@ -9,7 +9,6 @@ const [quantity, setQuantity] = useState(0);
 const {addItem} = useContext (CartContext)
 
 const handleOnAdd = (quantity) => {
-    console.log ('Agregar al carrito')
     setQuantity(quantity)
     addItem({id, name, price, quantity})
 }
@@ -23,7 +22,7 @@ const handleOnAdd = (quantity) => {
                 <p className="price">${price}</p>
             </div>
             <div>
-                {quantity > 0 ? <Link to='/cart' className="verProducto">Finalizar compra</Link> : <CountItem stock={stock} onAdd={handleOnAdd} />}
+                {quantity > 0 ? <Link to='/cart' className="verProducto">Finalizar compra</Link> :  <CountItem stock={stock} onAdd={handleOnAdd} />}
                 
             </div>
         </div>

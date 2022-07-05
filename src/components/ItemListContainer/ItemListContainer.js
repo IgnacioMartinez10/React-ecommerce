@@ -2,8 +2,6 @@
 import './ItemListContainer.css';
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList';
-// import { getProducts} from '../../AsyncMock'
-// import { getProductsByCategory } from '../../AsyncMock';
 import { useParams } from 'react-router-dom';
 import { ClipLoader  } from 'react-spinners';
 import { getDocs, collection, query, where } from 'firebase/firestore'
@@ -24,7 +22,6 @@ const ItemListContainer = (props) => {
 
 
         getDocs(collectionRef).then(response =>{
-            console.log(response.docs)
             const products = response.docs.map(doc => {
                 return {id: doc.id, ...doc.data()}
             })

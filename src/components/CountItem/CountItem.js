@@ -21,7 +21,7 @@ const CountItem = ({stock, onAdd}) => {
     }
 
     return (
-        <div className='card'>
+        <div className=''>
             <div className='containerButton'>
                 <button onClick={decrement}>-</button>
                 <h1>{count}</h1>

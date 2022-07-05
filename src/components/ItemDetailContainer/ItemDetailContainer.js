@@ -18,7 +18,6 @@ const ItemDetailContainer = () => {
         setLoading(true)
 
         getDoc(doc(db, 'products', productId)).then(response => {
-          console.log(response)
           const product = {id: response.id, ...response.data()}
           setProduct(product)
         }).catch(error => {
@@ -27,12 +26,6 @@ const ItemDetailContainer = () => {
             setLoading(false)
         })
 
-
-        // getProductsById(productId).then(response => {
-        //     setProduct(response);
-        // }).finally(() => {
-        //     setLoading(false)
-        // })
     }, [productId]);
 
     if(loading){
