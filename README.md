@@ -18,10 +18,10 @@ Este proyecto trata de un ecommerce realizado con Reactjs y Firebase en la base 
 
 Para inicializar el proyecto debemos clonar el repositorio.
 
-$ git clone https://github.com/IgnacioMartinez10/React-ecommerce.git
-$ cd 'crear carpeta'
-$ npm install
-$ npm start
+ * $ git clone https://github.com/IgnacioMartinez10/React-ecommerce.git
+* $ cd 'crear carpeta'
+* $ npm install
+* $ npm start
 
 Built Using: Create-React-App
 
